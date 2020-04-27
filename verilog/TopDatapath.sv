@@ -8,9 +8,9 @@ module Datapath(CLK, Din, num_R1, num_R2, WE, W1, MS, ALU_out
     parameter size_data = 16;
     
     input CLK;
-    input WE;
-    input[2:0] W1;
-    input[2:0] num_R1, num_R2;
+    input WE; //write enable
+    input[2:0] W1; // location for read-in data
+    input[2:0] num_R1, num_R2; //
     input[2:0] MS;
     input[size_data - 1:0] Din;
     output [size_data - 1:0] ALU_out;
