@@ -47,7 +47,7 @@ module FSM(CLK, Go, next, MS, MS_out, CS_out, Done_out, num_R1, num_R2, W1, WE
                 num_R2 = 3'b111;
                 WE = 1;             //allow register to write Din into RF
                 MS_out = 3'b000;
-                W1 = 3'b000;        //RF[1] <- Din (write Din into RF[0]
+                W1 = 3'b000;        //RF[0] <- Din (write Din into RF[0]
                 Done_out = 1'b0;
             end
             
