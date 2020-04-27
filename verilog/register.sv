@@ -29,7 +29,7 @@ module register(CLK, num_R1, num_R2, W1, Din, WE, Dout_1, Dout_2
     
     always@(posedge CLK) begin
         if(WE)      //WE=1, RF=0 - 8, which means we can store 8 data
-        RF[W1] <= Din;
+        RF[W1] <= Din; // take in Din and write it to location W1 in RF
         
         Dout_1 <= RF[num_R1];
         Dout_2 <= RF[num_R2];
