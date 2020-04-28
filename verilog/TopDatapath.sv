@@ -19,7 +19,5 @@ module Datapath(CLK, Din, num_R1, num_R2, WE, W1, MS, ALU_out
     register REG1(CLK, num_R1, num_R2, W1, Din, WE, Dout_1, Dout_2);
     ALU ALU1(Dout_1, Dout_2, MS, ALU_out);
     
-    //how to input two numbers in 1 Din?
-    
     
 endmodule
