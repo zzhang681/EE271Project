@@ -78,7 +78,13 @@ module FSM(CLK, clear, next, MS, MS_out, CS_out, Done_out, W1, WE
                 NS = calculation;
             end
             
-
+            default: begin
+                WE = 0;             
+                MS_out = 3'b000;
+                W1 = 0;             
+                Done_out = 0;
+                NS = Idle1;
+            end
 
             // Intering to ALU from here: (Change need to be made!)
 

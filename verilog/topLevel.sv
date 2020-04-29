@@ -1,3 +1,6 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+
 module topLevel(clk, clear, next, MS, Din, Done_out, CS_out, Alu_out);
 	input clk, clear, next;
 	input [2:0] MS;
