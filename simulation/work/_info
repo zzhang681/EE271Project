@@ -10,7 +10,7 @@ cModel Technology
 dF:/intelFPGA_lite/18.1
 vALU
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1588196193
+Z1 !s110 1588199527
 !i10b 1
 !s100 n;oWGo:ANWkP3NoNg[o4M0
 Idi9U87izJ28NnV7nWdd^>3
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1588196193.000000
+Z6 !s108 1588199527.000000
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.sv|
 !i113 1
@@ -62,13 +62,13 @@ vFSM
 R0
 R1
 !i10b 1
-!s100 APK_z[RP]X5kNW1QM[zXk3
-IEm4ESGgKLC:jC52fj96^n2
+!s100 zh=0SKjeG[Ud;ZBY0VIS60
+Ii>=5:DG58W5geHXA]mHMk2
 R2
 !s105 FSM_sv_unit
 S1
 R3
-w1588195825
+w1588199523
 8C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.sv
 FC:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.sv
 L0 5
@@ -85,7 +85,7 @@ R8
 n@f@s@m
 vregister
 R0
-Z9 !s110 1588196194
+R1
 !i10b 1
 !s100 S]MPGB59;Q]Z]3XBThW:d1
 I_?SENV]lC4G=4;AQAg?M30
@@ -101,7 +101,7 @@ R5
 r1
 !s85 0
 31
-Z10 !s108 1588196194.000000
+R6
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.sv|
 !i113 1
@@ -109,15 +109,15 @@ R7
 R8
 vtestb
 R0
-R9
+R1
 !i10b 1
-!s100 ]ieS5COZmGLN5B1^Iz93K3
-I^VTJ>EjUE]WR4_P1cnICV1
+!s100 ZPUaNTz=b73]GJ`OGh2U12
+IHP@8VL?S;N>XdbIT5g^1`1
 R2
 !s105 testb_sv_unit
 S1
 R3
-R4
+w1588198679
 8C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv
 FC:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv
 L0 4
@@ -125,7 +125,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv|
 !i113 1
@@ -133,7 +133,7 @@ R7
 R8
 vtopLevel
 R0
-R9
+R1
 !i10b 1
 !s100 a]o6lz[c3M7F]5?>l=^lC2
 IP8>2IUHz]>:m`fnb1^ioI2
@@ -149,7 +149,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.sv|
 !i113 1

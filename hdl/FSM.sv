@@ -21,8 +21,8 @@ module FSM(CLK, clear, next, MS, MS_out, CS_out, Done_out, W1, WE
                 Input1 = 3'b001,        //s1, input input1
                 Idle2 = 3'b010,
                 Input2 = 3'b011,        //s3, input input2
-                Idle3 = 3'b100,         //s4, input MS
-                calculation = 3'b101;   //s5
+                //Idle3 = 3'b100,         //s4, input MS
+                calculation = 3'b100;   //s5
 
                 
     always@(posedge CLK) CS = NS;
@@ -59,21 +59,13 @@ module FSM(CLK, clear, next, MS, MS_out, CS_out, Done_out, W1, WE
                 MS_out = 3'b000;
                 W1 = 1;             //RF[1] <- Din (write Din into RF[1] (cuz now we are inputing input2
                 Done_out = 0;
-                NS = Idle3;
-            end
-
-            Idle3: begin            // waiting for input_2
-                WE = 0;             //allow register to write Din into RF
-                MS_out = 3'b000;
-                W1 = 1;             //RF[1] <- Din (write Din into RF[1] (cuz now we are inputing input2
-                Done_out = 0;
-                NS = Idle3;
+                NS = calculation;
             end
 
             calculation: begin
                 WE = 0;             // don't care
                 MS_out = MS;    
-                W1 = 0;             // don't care
+                W1 = 1;             // don't care
                 Done_out = 1;
                 NS = calculation;
             end
@@ -151,13 +143,9 @@ module FSM(CLK, clear, next, MS, MS_out, CS_out, Done_out, W1, WE
             Idle2: begin
                 NS = Input2;
                 end
-                
-            Idle3: begin
-                NS = calculation;
-                end
             
             calculation: begin
-                NS = calculation;
+                NS = Input2;
                 end
 
             default: begin
