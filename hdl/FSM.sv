@@ -169,7 +169,7 @@ module FSM(CLK, clear, next, MS, MS_out, CS_out, Done_out, W1, WE
 
     always@(posedge clear)
     begin
-        CS = Idel1;
+        CS = Idle1;
     end
     
     

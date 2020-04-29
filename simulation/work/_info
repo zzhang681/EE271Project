@@ -1,0 +1,158 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/intelFPGA_lite/18.1
+vALU
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1588196193
+!i10b 1
+!s100 n;oWGo:ANWkP3NoNg[o4M0
+Idi9U87izJ28NnV7nWdd^>3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ALU_sv_unit
+S1
+Z3 dC:/Users/zid016/Desktop/EE271/EE271Project/simulation
+Z4 w1588195228
+8C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.sv
+FC:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.sv
+L0 4
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1588196193.000000
+!s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+n@a@l@u
+vDatapath
+R0
+R1
+!i10b 1
+!s100 fPz0EN=[]Q0IU9h@?R^m53
+Ik14<^g<hG5_i`JPlnSBAD3
+R2
+!s105 Datapath_sv_unit
+S1
+R3
+R4
+8C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.sv
+FC:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.sv
+L0 5
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.sv|
+!i113 1
+R7
+R8
+n@datapath
+vFSM
+R0
+R1
+!i10b 1
+!s100 APK_z[RP]X5kNW1QM[zXk3
+IEm4ESGgKLC:jC52fj96^n2
+R2
+!s105 FSM_sv_unit
+S1
+R3
+w1588195825
+8C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.sv
+FC:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.sv
+L0 5
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.sv|
+!i113 1
+R7
+R8
+n@f@s@m
+vregister
+R0
+Z9 !s110 1588196194
+!i10b 1
+!s100 S]MPGB59;Q]Z]3XBThW:d1
+I_?SENV]lC4G=4;AQAg?M30
+R2
+!s105 register_sv_unit
+S1
+R3
+R4
+8C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.sv
+FC:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.sv
+L0 19
+R5
+r1
+!s85 0
+31
+Z10 !s108 1588196194.000000
+!s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.sv|
+!i113 1
+R7
+R8
+vtestb
+R0
+R9
+!i10b 1
+!s100 ]ieS5COZmGLN5B1^Iz93K3
+I^VTJ>EjUE]WR4_P1cnICV1
+R2
+!s105 testb_sv_unit
+S1
+R3
+R4
+8C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv
+FC:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv|
+!i113 1
+R7
+R8
+vtopLevel
+R0
+R9
+!i10b 1
+!s100 a]o6lz[c3M7F]5?>l=^lC2
+IP8>2IUHz]>:m`fnb1^ioI2
+R2
+!s105 topLevel_sv_unit
+S1
+R3
+w1588196163
+8C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.sv
+FC:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.sv|
+!i113 1
+R7
+R8
+ntop@level

@@ -14,3 +14,6 @@ module topLevel(clk, clear, next, MS, Din, Done_out, CS_out, Alu_out);
 
 	FSM sfm1 (clk, clear, next, MS, MS_wire, CS_out, Done_out, W1_wire, WE_wire);
 	Datapath datapath1 (clk, Din, WE_wire, W1_wire, MS_wire, Alu_out);
+
+	
+endmodule
