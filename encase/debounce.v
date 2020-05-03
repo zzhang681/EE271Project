@@ -3,10 +3,8 @@
 //This is connected to CLK generator, I dont know why but it may work
 
 
-module debounce(pb_debounced, pb, clk
-
-    );
-    input pb, clk;  
+module debounce(pb_debounced, pb, clk);
+input pb, clk;  
 output pb_debounced; 
 reg [7:0] shift; 
 reg pb_debounced; 
