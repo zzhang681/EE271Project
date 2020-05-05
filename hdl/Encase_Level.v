@@ -7,7 +7,7 @@ module Encase_Level(MS_out, clear,
     Din_dis1, Din_dis2,
     ALU_out0, ALU_out1, ALU_out2, ALU_out3,
     LEDsel,
-    LED0, LED1, LED2, LED3,
+    LED0, LED1, LED2, LED3
     
 
     );
@@ -26,9 +26,6 @@ module Encase_Level(MS_out, clear,
     ///wire DONT_USE, clksec4;                        //clk_5KHz
     wire [7:0] state, result;
     wire [7:0] Din_7seg1, Din_7seg2, ALUout_7seg0, ALUout_7seg1, ALUout_7seg2, ALUout_7seg3, MS_7seg;
-    
-    //CLK_Generator U0(clk50MHz, rst, clksec4, clk5KHz);     //not sure where to put the clock
-    //debounce U1(Go, Go_top, clk50MHz);
     BCD27SEG U2(Din_dis1, Din_7seg1);
     BCD27SEG U3(Din_dis2, Din_7seg2);
     BCD27SEG U4(ALU_out0, ALUout_7seg0);

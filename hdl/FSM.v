@@ -41,7 +41,7 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE, cs_out
     
   
     
-    always@(CS or !next) begin
+    always@(CS or !next or MS) begin
         case(CS)
             Idle1: begin            // Idle1 is initial state which is wating for input_1
                 WE = 0;             //we wont receive any data from input when WE = 0
@@ -83,7 +83,6 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE, cs_out
                 MS_out = 4'b0000;
                 W1 = 1;             //RF[1] <- Din (write Din into RF[1] (cuz now we are inputing input2
                 Done_out = 0;
-                LEDsel = 2'b01;     //LED shows MS on LED0
                 NS = calculation;
 					 cs_out = Input2;
             end
@@ -93,7 +92,8 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE, cs_out
                 MS_out = MS;        //BCD
                 W1 = 1;             // don't care
                 Done_out = 0;
-					 cs_out = calculation;
+                LEDsel = 2'b01;     //LED shows MS on LED0
+				cs_out = calculation;
                 if (!next && !nextPrev)
                     NS = done;
                 else
@@ -121,10 +121,6 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE, cs_out
 
         endcase
     end
-
-    
-   
-    
     
     
 endmodule

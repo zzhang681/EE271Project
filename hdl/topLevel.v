@@ -1,7 +1,9 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 
-module topLevel(clk, clear, next, MS, Din, level,EDL1, EDL2, EDL3, EDL4,Done_out, LED0, LED1, LED2, LED3,HEX4);
+module topLevel(clk, clear, next, MS, Din, level,EDL1, EDL2, EDL3, EDL4,Done_out, LED0, LED1, LED2, LED3,HEX4
+    ,ALUout_test
+    );
 	input clk, clear, next, level;
 	input [2:0] MS;
 	input [3:0] Din;
@@ -12,6 +14,7 @@ module topLevel(clk, clear, next, MS, Din, level,EDL1, EDL2, EDL3, EDL4,Done_out
 	output wire Done_out;
 	output wire[7:0] LED0, LED1, LED2, LED3;
 	output wire [7:0]HEX4;
+	output reg[15:0] ALUout_test;
 	//output [15:0] Alu_out;
 
 	wire W1_wire, WE_wire;
@@ -30,11 +33,13 @@ module topLevel(clk, clear, next, MS, Din, level,EDL1, EDL2, EDL3, EDL4,Done_out
 	EDL4 = !next;
 	end
 	
+	always@(*) ALUout_test = ALU_out;
+	
 
     //CLK_Generator U0(clk50MHz, rst, clksec4, clk5KHz);
 	FSM sfm1 (clk, clear, next, MS, MS_out_wire, LEDsel, Done_out, W1_wire, WE_wire, cs_out);
-	Datapath datapath1 (clk, Din, WE_wire, W1_wire, level, MS, Alu_out, Din_dis1, Din_dis2);
-	fourbit U4(in, ALU_out3, ALU_out2, ALU_out1, ALU_out0);
+	Datapath datapath1 (clk, Din, WE_wire, W1_wire, level, MS, AlU_out, Din_dis1, Din_dis2);
+	fourbit U4(ALU_out, ALU_out3, ALU_out2, ALU_out1, ALU_out0);
 	Encase_Level EL1(MS_out_wire,  clear,
     Din_dis1, Din_dis2,
     ALU_out0, ALU_out1, ALU_out2, ALU_out3,

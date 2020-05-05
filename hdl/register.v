@@ -30,7 +30,7 @@ module register(CLK, W1, Din, WE, level, Dout_1, Dout_2, Dis_1, Dis_2
     
     reg[15:0] RF[1:0];  // 2D array, 2 registers with 16 bits for each (only two registers needed for this project for now)
     
-    always@(level, Din) begin
+    always@(level, Din, posedge CLK) begin
         case(level)
             1'b0: begin temp_value[0] <= Din; Dis_1 <= Din; end     //
             1'b1: begin temp_value[1] <= Din; Dis_2 <= Din; end
