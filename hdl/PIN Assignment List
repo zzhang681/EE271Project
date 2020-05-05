@@ -13,3 +13,4 @@ SW5-7 -> MS
 SW4 -> level
 clear -> button1
 next -> button2
+clk -> MAX10_CLK1_50 (PIN_P11)
