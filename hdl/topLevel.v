@@ -2,7 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module topLevel(clk, clear, next, MS, Din, level,EDL1, EDL2, EDL3, EDL4,Done_out, LED0, LED1, LED2, LED3,HEX4
-    ,ALUout_test
+    //,ALUout_test
     );
 	input clk, clear, next, level;
 	input [2:0] MS;
@@ -33,7 +33,7 @@ module topLevel(clk, clear, next, MS, Din, level,EDL1, EDL2, EDL3, EDL4,Done_out
 	EDL4 = !next;
 	end
 	
-	always@(*) ALUout_test = ALU_out;
+	//always@(*) ALUout_test = ALU_out;
 	
 
     //CLK_Generator U0(clk50MHz, rst, clksec4, clk5KHz);
