@@ -7,7 +7,7 @@
 //             1---|level          <|---CLK
 //             3---|num_R1          |
 //             3---|num_R2          |----Display output x2
-//                 |        RF      |
+//                 |        RF      |4
 //             1---|WE              |
 //             3---|W1              |
 //                 ------------------
@@ -32,22 +32,19 @@ module register(CLK, W1, Din, WE, level, Dout_1, Dout_2, Dis_1, Dis_2
     
     always@(level, Din) begin
         case(level)
-            1'b0: begin temp_value[1] <= Din; Dis_1 <= Din; end     //
-            1'b1: begin temp_value[0] <= Din; Dis_2 <= Din; end
+            1'b0: begin temp_value[0] <= Din; Dis_1 <= Din; end     //
+            1'b1: begin temp_value[1] <= Din; Dis_2 <= Din; end
             default: temp_value[0] <= Din;
         endcase
     end
     
     always@(posedge CLK) begin
         if(WE)begin      //WE=1, RF=0 - 8, which means we can store 8 data
-                RF[W1] <= temp_value[0]*10 + temp_value[1]; // take in Din and write it to location W1 in RF
+                RF[W1] <= temp_value[1]*10 + temp_value[0]; // take in Din and write it to location W1 in RF
         end
         
         Dout_1 <= RF[0];
         Dout_2 <= RF[1];
-
-        // Dout_1 <= RF[num_R1];
-        // Dout_2 <= RF[num_R2];
         
     end
     

@@ -6,23 +6,21 @@ module BCD27SEG( number, LED
     );
     input [3:0] number;
     output reg [7:0] LED;
-    reg s0, s1, s2, s3, s4, s5, s6, s7;
     always @ (number)
     begin // BCD to 7-segment decoding
      case (number) // s0 - s6 are active low
-         4'b0000: begin s0=0; s1=0; s2=0; s3=1; s4=0; s5=0; s6=0; s7=0; end
-         4'b0001: begin s0=1; s1=0; s2=1; s3=1; s4=0; s5=1; s6=1; s7=0; end
-         4'b0010: begin s0=0; s1=1; s2=0; s3=0; s4=0; s5=1; s6=0; s7=0; end
-         4'b0011: begin s0=0; s1=0; s2=1; s3=0; s4=0; s5=1; s6=0; s7=0; end
-         4'b0100: begin s0=1; s1=0; s2=1; s3=0; s4=0; s5=0; s6=1; s7=0; end
-         4'b0101: begin s0=0; s1=0; s2=1; s3=0; s4=1; s5=0; s6=0; s7=0; end
-         4'b0110: begin s0=0; s1=0; s2=0; s3=0; s4=1; s5=0; s6=0; s7=0; end
-         4'b0111: begin s0=1; s1=0; s2=1; s3=1; s4=0; s5=1; s6=0; s7=0; end
-         4'b1000: begin s0=0; s1=0; s2=0; s3=0; s4=0; s5=0; s6=0; s7=0; end
-         4'b1001: begin s0=0; s1=0; s2=1; s3=0; s4=0; s5=0; s6=0; s7=0; end
-   default: begin s0=0; s1=0; s2=0; s3=0; s4=0; s5=0; s6=0; s7=0; end
+            4'b0000: LED = 8'b11000000;    
+	       	4'b0001: LED = 8'b11111001;
+            4'b0010: LED = 8'b10100100;
+            4'b0011: LED = 8'b10110000;
+            4'b0100: LED = 8'b10011001;
+            4'b0101: LED = 8'b10010010;
+            4'b0110: LED = 8'b10000010;    
+		    4'b0111: LED = 8'b11111000;
+            4'b1000: LED = 8'b10000000;  
+		    4'b1001: LED = 8'b10010000;
+     default:  LED = 8'b11000000; 
   endcase
-    LED = {s0, s1, s2, s3, s4, s5, s6, s7};
 end
     
     
