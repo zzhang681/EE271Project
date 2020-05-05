@@ -1,11 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 
-module topLevel(clk, clear, next, MS, Din, level, Done_out);
+module topLevel(clk, clear, next, MS, Din, level, Done_out, LED0, LED1, LED2, LED3);
 	input clk, clear, next, level;
 	input [2:0] MS;
 	input [15:0] Din;
 	output Done_out;
+	output[7:0] LED0, LED1, LED2, LED3;
 	//output [15:0] Alu_out;
 
 	wire W1_wire, WE_wire;
