@@ -1,4 +1,10 @@
-module res_display(in, out3, out2, out1, out0);
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module fourbit(in, out3, out2, out1, out0
+
+    );
   input[15:0] in;
   output[3:0] out3, out2, out1, out0;
   wire [15:0] val1, val2, val3;
@@ -16,5 +22,6 @@ module res_display(in, out3, out2, out1, out0);
   
   assign out3 = val3 % 10;
   
-  
+
 endmodule
+

@@ -90,53 +90,6 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 NS = Idle1;
             end
 
-            // Intering to ALU from here: (Change need to be made!)
-
-            // Wait: begin             //in this state we input MS
-            //     WE = 0;
-            //     MS_out = 3'b000;
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            // Add: begin
-            //     WE = 0;
-            //     MS_out = 3'b001;    //Add
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            // Sub: begin
-            //     WE = 0;
-            //     MS_out = 3'b010;    //Sub
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            // Mul: begin
-            //     WE = 0;
-            //     MS_out = 3'b011;    //Mul
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            // Xor: begin
-            //     WE = 0;
-            //     MS_out = 3'b100;    //XOR
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            //
-            ///////////////////////////////////////////////////////////
-            //
-            
-            // Done: begin
-            //     WE = 0;
-            //     //MS_out = 3'b000;    
-            //     W1 = 3'b010;   
-            //     Done_out = 0;
-            // end
             
         endcase
     end   

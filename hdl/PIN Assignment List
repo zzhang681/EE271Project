@@ -1,0 +1,16 @@
+
+4bits
+LED0 -> HEX0
+LED1 -> HEX1
+LED2 -> HEX2
+LED3 -> HEX3
+SW0-3 -> Din
+
+3bits
+SW5-7 -> MS
+
+1bit
+SW4 -> level
+clear -> button1
+next -> button2
+clk -> MAX10_CLK1_50 (PIN_P11)
