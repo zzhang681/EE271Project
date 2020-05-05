@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
+module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE, cs_out
     
 
     );
@@ -15,7 +15,7 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
     output reg W1;
     output reg[3:0] MS_out;                 //MS_out will be passed to ALU file
     output reg WE, Done_out;                //write enable for register and done signal for S11
-                               
+    reg nextPrev;                            
     reg[2:0] CS, NS;                    //current state & next state
     parameter   Idle1 = 3'b000,         //s0
                 Input1 = 3'b001,        //s1, input input1hao
@@ -23,12 +23,25 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 Input2 = 3'b011,        //s3, input input2
                 calculation = 3'b100;   //s5
     parameter   done = 3'b101;
+	 output reg [3:0]cs_out;
                 
 
                 
-    always@(posedge CLK) CS = NS;
+   always@(posedge CLK) begin 
+        case(clear)
+            1'b1: begin
+				      CS <= NS;
+				      nextPrev <= !next;
+						end
+            1'b0: CS <= Idle1;
+        endcase
+   end
+	
+	
     
-    always@(CS) begin
+  
+    
+    always@(CS or !next) begin
         case(CS)
             Idle1: begin            // Idle1 is initial state which is wating for input_1
                 WE = 0;             //we wont receive any data from input when WE = 0
@@ -36,7 +49,11 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 W1 = 0;             //W1 initial state
                 Done_out = 0;       //?
                 LEDsel = 2'b00;     //LED shows din in LED0 and LED1
-                NS = Idle1;
+                cs_out = Idle1;
+					 if (!next && !nextPrev)
+                    NS = Input1;
+                else
+                    NS = Idle1;
                 end
                 
             Input1: begin
@@ -45,6 +62,7 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 W1 = 0;             //RF[0] <- Din (write Din into RF[0]
                 Done_out = 0;
                 NS = Idle2;
+					 cs_out = Input1;
             end
             
             Idle2: begin            // waiting for input_2
@@ -53,7 +71,11 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 W1 = 1;             //RF[1] <- Din (write Din into RF[1] (cuz now we are inputing input2
                 Done_out = 0;
                 LEDsel = 2'b00;     //LED shows din in LED0 and LED1
-                NS = Idle2;
+					 cs_out = Idle2;
+                if (!next && !nextPrev)
+                    NS = Input2;
+                else
+                    NS = Idle2;
             end
 
             Input2: begin
@@ -63,6 +85,7 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 Done_out = 0;
                 LEDsel = 2'b01;     //LED shows MS on LED0
                 NS = calculation;
+					 cs_out = Input2;
             end
 
             calculation: begin
@@ -70,16 +93,21 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 MS_out = MS;        //BCD
                 W1 = 1;             // don't care
                 Done_out = 0;
-                NS = calculation;
+					 cs_out = calculation;
+                if (!next && !nextPrev)
+                    NS = done;
+                else
+                    NS = calculation;
             end
             
             done: begin
                 WE = 0;             // don't care
                 MS_out = MS;        //BCD
                 W1 = 1;             // don't care
-                Done_out = 0;
+                Done_out = 1;
                 LEDsel = 2'b10;     //LED shows 4-digit result on 4 LEDs
                 NS = done;
+					 cs_out = done;
             end
                    
             default: begin
@@ -88,43 +116,14 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 W1 = 0;             
                 Done_out = 0;
                 NS = Idle1;
+					 cs_out = 4'b0000;
             end
 
-            
         endcase
-    end   
-
-    always@(posedge next) begin
-        //NS = Idle;
-        case (CS)
-        
-            Idle1: begin 
-                NS = Input1;
-                end
-                
-            Idle2: begin
-                NS = Input2;
-                end
-            
-            calculation: begin
-                NS = done;
-                end
-                
-            done: begin
-                NS = Idle1;
-                end
-
-            default: begin
-                NS = Idle1;
-                end
-                
-            endcase
     end
 
-    always@(posedge clear)
-    begin
-        CS = Idle1;
-    end
+    
+   
     
     
     

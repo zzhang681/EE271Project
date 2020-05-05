@@ -17,7 +17,7 @@ module ALU(Din1, Din2, MS, ALU_out
             3'b101: ALU_out = Din1 ^ Din2;  //XOR
             3'b110: ALU_out = Din1 % Din2;  //Module
             3'b111: ALU_out = Din1 & Din2;  //AND
-            default: ALU_out = 0;
+            default: ALU_out = Din1;
         endcase
     end
     

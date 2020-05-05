@@ -3,7 +3,7 @@
 
 //Op, in1, in2, CSout, Done, Out, Go_top, RST_db, clk50MHz, clk5KHz, rst, ledout, ledsel
 //Din, MS, ALU_out
-module Encase_Level(MS_out, Done_out, clear,
+module Encase_Level(MS_out, clear,
     Din_dis1, Din_dis2,
     ALU_out0, ALU_out1, ALU_out2, ALU_out3,
     LEDsel,
@@ -18,7 +18,7 @@ module Encase_Level(MS_out, Done_out, clear,
     input[3:0] Din_dis1, Din_dis2, ALU_out0, ALU_out1, ALU_out2, ALU_out3;
     output[7:0] LED0, LED1, LED2, LED3;
     //output  [3:0] CS_out;   //not used
-    output  Done_out;       //a LED light
+    //output  Done_out;       //a LED light
 
     
     wire Go;

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 //
-//                       16|<-Din
+//                         |<-Din
 //                         |
 //                 ------------------
 //             1---|level          <|---CLK
@@ -24,7 +24,7 @@ module register(CLK, W1, Din, WE, level, Dout_1, Dout_2, Dis_1, Dis_2
     //input[2:0] num_R1, num_R2;  //Read command, read RF[specific position]
     input W1;  //reg # to write to, 0 or 1
     input[3:0] Din; //input data from keypad
-    reg[3:0] temp_value[1:0];
+    reg[15:0] temp_value[1:0];
     output reg[15:0] Dout_1, Dout_2; // two variable that we will calculate later
     output reg[3:0] Dis_1, Dis_2;   //Dis1: 1 digit Dis2: 10 digit
     
