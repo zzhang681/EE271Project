@@ -38,7 +38,7 @@ module topLevel(clk, clear, next, MS, Din, level,EDL1, EDL2, EDL3, EDL4,Done_out
 
     //CLK_Generator U0(clk50MHz, rst, clksec4, clk5KHz);
 	FSM sfm1 (clk, clear, next, MS, MS_out_wire, LEDsel, Done_out, W1_wire, WE_wire, cs_out);
-	Datapath datapath1 (clk, Din, WE_wire, W1_wire, level, MS, AlU_out, Din_dis1, Din_dis2);
+	Datapath datapath1 (clk, Din, WE_wire, W1_wire, level, MS, ALU_out, Din_dis1, Din_dis2);
 	fourbit U4(ALU_out, ALU_out3, ALU_out2, ALU_out1, ALU_out0);
 	Encase_Level EL1(MS_out_wire,  clear,
     Din_dis1, Din_dis2,
