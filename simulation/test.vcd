@@ -1,0 +1,1270 @@
+$date
+	Wed Apr 29 15:32:18 2020
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module testb $end
+$var reg 1 ! clk $end
+$var reg 1 " clear $end
+$var reg 1 # next $end
+$var reg 3 $ MS [2:0] $end
+$var reg 16 % Din [15:0] $end
+$var wire 1 & Done_out $end
+$var wire 1 ' CS_out [2] $end
+$var wire 1 ( CS_out [1] $end
+$var wire 1 ) CS_out [0] $end
+$var wire 1 * Alu_out [15] $end
+$var wire 1 + Alu_out [14] $end
+$var wire 1 , Alu_out [13] $end
+$var wire 1 - Alu_out [12] $end
+$var wire 1 . Alu_out [11] $end
+$var wire 1 / Alu_out [10] $end
+$var wire 1 0 Alu_out [9] $end
+$var wire 1 1 Alu_out [8] $end
+$var wire 1 2 Alu_out [7] $end
+$var wire 1 3 Alu_out [6] $end
+$var wire 1 4 Alu_out [5] $end
+$var wire 1 5 Alu_out [4] $end
+$var wire 1 6 Alu_out [3] $end
+$var wire 1 7 Alu_out [2] $end
+$var wire 1 8 Alu_out [1] $end
+$var wire 1 9 Alu_out [0] $end
+
+$scope module Test1 $end
+$var wire 1 : clk $end
+$var wire 1 ; clear $end
+$var wire 1 < next $end
+$var wire 1 = MS [2] $end
+$var wire 1 > MS [1] $end
+$var wire 1 ? MS [0] $end
+$var wire 1 @ Din [15] $end
+$var wire 1 A Din [14] $end
+$var wire 1 B Din [13] $end
+$var wire 1 C Din [12] $end
+$var wire 1 D Din [11] $end
+$var wire 1 E Din [10] $end
+$var wire 1 F Din [9] $end
+$var wire 1 G Din [8] $end
+$var wire 1 H Din [7] $end
+$var wire 1 I Din [6] $end
+$var wire 1 J Din [5] $end
+$var wire 1 K Din [4] $end
+$var wire 1 L Din [3] $end
+$var wire 1 M Din [2] $end
+$var wire 1 N Din [1] $end
+$var wire 1 O Din [0] $end
+$var wire 1 & Done_out $end
+$var wire 1 ' CS_out [2] $end
+$var wire 1 ( CS_out [1] $end
+$var wire 1 ) CS_out [0] $end
+$var wire 1 * Alu_out [15] $end
+$var wire 1 + Alu_out [14] $end
+$var wire 1 , Alu_out [13] $end
+$var wire 1 - Alu_out [12] $end
+$var wire 1 . Alu_out [11] $end
+$var wire 1 / Alu_out [10] $end
+$var wire 1 0 Alu_out [9] $end
+$var wire 1 1 Alu_out [8] $end
+$var wire 1 2 Alu_out [7] $end
+$var wire 1 3 Alu_out [6] $end
+$var wire 1 4 Alu_out [5] $end
+$var wire 1 5 Alu_out [4] $end
+$var wire 1 6 Alu_out [3] $end
+$var wire 1 7 Alu_out [2] $end
+$var wire 1 8 Alu_out [1] $end
+$var wire 1 9 Alu_out [0] $end
+$var wire 1 P MS_wire [2] $end
+$var wire 1 Q MS_wire [1] $end
+$var wire 1 R MS_wire [0] $end
+$var wire 1 S W1_wire $end
+$var wire 1 T WE_wire $end
+
+$scope module sfm1 $end
+$var parameter 3 U Idle1 $end
+$var parameter 3 V Input1 $end
+$var parameter 3 W Idle2 $end
+$var parameter 3 X Input2 $end
+$var parameter 3 Y calculation $end
+$var wire 1 : CLK $end
+$var wire 1 ; clear $end
+$var wire 1 < next $end
+$var wire 1 = MS [2] $end
+$var wire 1 > MS [1] $end
+$var wire 1 ? MS [0] $end
+$var reg 3 Z CS_out [2:0] $end
+$var reg 1 [ W1 $end
+$var reg 3 \ MS_out [2:0] $end
+$var reg 1 ] WE $end
+$var reg 1 ^ Done_out $end
+$var reg 3 _ CS [2:0] $end
+$var reg 3 ` NS [2:0] $end
+$upscope $end
+
+$scope module datapath1 $end
+$var parameter 32 a size_data $end
+$var wire 1 : CLK $end
+$var wire 1 T WE $end
+$var wire 1 S W1 $end
+$var wire 1 P MS [2] $end
+$var wire 1 Q MS [1] $end
+$var wire 1 R MS [0] $end
+$var wire 1 @ Din [15] $end
+$var wire 1 A Din [14] $end
+$var wire 1 B Din [13] $end
+$var wire 1 C Din [12] $end
+$var wire 1 D Din [11] $end
+$var wire 1 E Din [10] $end
+$var wire 1 F Din [9] $end
+$var wire 1 G Din [8] $end
+$var wire 1 H Din [7] $end
+$var wire 1 I Din [6] $end
+$var wire 1 J Din [5] $end
+$var wire 1 K Din [4] $end
+$var wire 1 L Din [3] $end
+$var wire 1 M Din [2] $end
+$var wire 1 N Din [1] $end
+$var wire 1 O Din [0] $end
+$var wire 1 * ALU_out [15] $end
+$var wire 1 + ALU_out [14] $end
+$var wire 1 , ALU_out [13] $end
+$var wire 1 - ALU_out [12] $end
+$var wire 1 . ALU_out [11] $end
+$var wire 1 / ALU_out [10] $end
+$var wire 1 0 ALU_out [9] $end
+$var wire 1 1 ALU_out [8] $end
+$var wire 1 2 ALU_out [7] $end
+$var wire 1 3 ALU_out [6] $end
+$var wire 1 4 ALU_out [5] $end
+$var wire 1 5 ALU_out [4] $end
+$var wire 1 6 ALU_out [3] $end
+$var wire 1 7 ALU_out [2] $end
+$var wire 1 8 ALU_out [1] $end
+$var wire 1 9 ALU_out [0] $end
+$var wire 1 b Dout_1 [15] $end
+$var wire 1 c Dout_1 [14] $end
+$var wire 1 d Dout_1 [13] $end
+$var wire 1 e Dout_1 [12] $end
+$var wire 1 f Dout_1 [11] $end
+$var wire 1 g Dout_1 [10] $end
+$var wire 1 h Dout_1 [9] $end
+$var wire 1 i Dout_1 [8] $end
+$var wire 1 j Dout_1 [7] $end
+$var wire 1 k Dout_1 [6] $end
+$var wire 1 l Dout_1 [5] $end
+$var wire 1 m Dout_1 [4] $end
+$var wire 1 n Dout_1 [3] $end
+$var wire 1 o Dout_1 [2] $end
+$var wire 1 p Dout_1 [1] $end
+$var wire 1 q Dout_1 [0] $end
+$var wire 1 r Dout_2 [15] $end
+$var wire 1 s Dout_2 [14] $end
+$var wire 1 t Dout_2 [13] $end
+$var wire 1 u Dout_2 [12] $end
+$var wire 1 v Dout_2 [11] $end
+$var wire 1 w Dout_2 [10] $end
+$var wire 1 x Dout_2 [9] $end
+$var wire 1 y Dout_2 [8] $end
+$var wire 1 z Dout_2 [7] $end
+$var wire 1 { Dout_2 [6] $end
+$var wire 1 | Dout_2 [5] $end
+$var wire 1 } Dout_2 [4] $end
+$var wire 1 ~ Dout_2 [3] $end
+$var wire 1 !! Dout_2 [2] $end
+$var wire 1 "! Dout_2 [1] $end
+$var wire 1 #! Dout_2 [0] $end
+
+$scope module REG1 $end
+$var wire 1 : CLK $end
+$var wire 1 T WE $end
+$var wire 1 S W1 $end
+$var wire 1 @ Din [15] $end
+$var wire 1 A Din [14] $end
+$var wire 1 B Din [13] $end
+$var wire 1 C Din [12] $end
+$var wire 1 D Din [11] $end
+$var wire 1 E Din [10] $end
+$var wire 1 F Din [9] $end
+$var wire 1 G Din [8] $end
+$var wire 1 H Din [7] $end
+$var wire 1 I Din [6] $end
+$var wire 1 J Din [5] $end
+$var wire 1 K Din [4] $end
+$var wire 1 L Din [3] $end
+$var wire 1 M Din [2] $end
+$var wire 1 N Din [1] $end
+$var wire 1 O Din [0] $end
+$var reg 16 $! Dout_1 [15:0] $end
+$var reg 16 %! Dout_2 [15:0] $end
+$upscope $end
+
+$scope module ALU1 $end
+$var wire 1 b Din1 [15] $end
+$var wire 1 c Din1 [14] $end
+$var wire 1 d Din1 [13] $end
+$var wire 1 e Din1 [12] $end
+$var wire 1 f Din1 [11] $end
+$var wire 1 g Din1 [10] $end
+$var wire 1 h Din1 [9] $end
+$var wire 1 i Din1 [8] $end
+$var wire 1 j Din1 [7] $end
+$var wire 1 k Din1 [6] $end
+$var wire 1 l Din1 [5] $end
+$var wire 1 m Din1 [4] $end
+$var wire 1 n Din1 [3] $end
+$var wire 1 o Din1 [2] $end
+$var wire 1 p Din1 [1] $end
+$var wire 1 q Din1 [0] $end
+$var wire 1 r Din2 [15] $end
+$var wire 1 s Din2 [14] $end
+$var wire 1 t Din2 [13] $end
+$var wire 1 u Din2 [12] $end
+$var wire 1 v Din2 [11] $end
+$var wire 1 w Din2 [10] $end
+$var wire 1 x Din2 [9] $end
+$var wire 1 y Din2 [8] $end
+$var wire 1 z Din2 [7] $end
+$var wire 1 { Din2 [6] $end
+$var wire 1 | Din2 [5] $end
+$var wire 1 } Din2 [4] $end
+$var wire 1 ~ Din2 [3] $end
+$var wire 1 !! Din2 [2] $end
+$var wire 1 "! Din2 [1] $end
+$var wire 1 #! Din2 [0] $end
+$var wire 1 P MS [2] $end
+$var wire 1 Q MS [1] $end
+$var wire 1 R MS [0] $end
+$var reg 16 &! ALU_out [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+bx $
+bx %
+bx Z
+x[
+bx \
+x]
+x^
+bx _
+bx `
+bx $!
+bx %!
+bx &!
+b0 U
+b1 V
+b10 W
+b11 X
+b100 Y
+b10000 a
+x&
+x)
+x(
+x'
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+xR
+xQ
+xP
+xS
+xT
+xq
+xp
+xo
+xn
+xm
+xl
+xk
+xj
+xi
+xh
+xg
+xf
+xe
+xd
+xc
+xb
+x#!
+x"!
+x!!
+x~
+x}
+x|
+x{
+xz
+xy
+xx
+xw
+xv
+xu
+xt
+xs
+xr
+0:
+0;
+0<
+x?
+x>
+x=
+xO
+xN
+xM
+xL
+xK
+xJ
+xI
+xH
+xG
+xF
+xE
+xD
+xC
+xB
+xA
+x@
+$end
+#5000
+1!
+1:
+#10000
+1"
+0!
+1;
+0:
+b0 _
+0]
+b0 \
+0[
+0^
+b0 `
+0T
+0S
+0&
+0R
+0Q
+0P
+b0 &!
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+#15000
+1!
+1:
+#20000
+0!
+0:
+#25000
+1!
+1:
+#30000
+0!
+0:
+#35000
+1!
+1:
+#40000
+0!
+0:
+#45000
+1!
+1:
+#50000
+0!
+0:
+#55000
+1!
+1:
+#60000
+0"
+0!
+0;
+0:
+#65000
+1!
+1:
+#70000
+0!
+0:
+#75000
+1!
+1:
+#80000
+0!
+0:
+#85000
+1!
+1:
+#90000
+0!
+0:
+#95000
+1!
+1:
+#100000
+0!
+0:
+#105000
+1!
+1:
+#110000
+b1 %
+0!
+1O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0:
+#115000
+1!
+1:
+#120000
+1#
+0!
+1<
+0:
+b1 `
+#125000
+1!
+1:
+b1 _
+1]
+b10 `
+1T
+#130000
+0!
+0:
+#135000
+1!
+1:
+b10 _
+0]
+1[
+0T
+1S
+#140000
+0!
+0:
+#145000
+1!
+1:
+b1 $!
+1q
+0p
+0o
+0n
+0m
+0l
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+#150000
+0!
+0:
+#155000
+1!
+1:
+#160000
+0!
+0:
+#165000
+1!
+1:
+#170000
+0#
+0!
+0<
+0:
+#175000
+1!
+1:
+#180000
+0!
+0:
+#185000
+1!
+1:
+#190000
+0!
+0:
+#195000
+1!
+1:
+#200000
+0!
+0:
+#205000
+1!
+1:
+#210000
+0!
+0:
+#215000
+1!
+1:
+#220000
+b11 %
+0!
+1N
+0:
+#225000
+1!
+1:
+#230000
+1#
+0!
+1<
+0:
+b11 `
+#235000
+1!
+1:
+b11 _
+1]
+b100 `
+1T
+#240000
+0!
+0:
+#245000
+1!
+1:
+b100 _
+0]
+bx \
+1^
+0T
+1&
+xR
+xQ
+xP
+#250000
+0!
+0:
+#255000
+1!
+1:
+b11 %!
+1#!
+1"!
+0!!
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+#260000
+0!
+0:
+#265000
+1!
+1:
+#270000
+0!
+0:
+#275000
+1!
+1:
+#280000
+0#
+0!
+0<
+0:
+#285000
+1!
+1:
+#290000
+0!
+0:
+#295000
+1!
+1:
+#300000
+0!
+0:
+#305000
+1!
+1:
+#310000
+0!
+0:
+#315000
+1!
+1:
+#320000
+0!
+0:
+#325000
+1!
+1:
+#330000
+b1 $
+0!
+1?
+0>
+0=
+0:
+#335000
+1!
+1:
+#340000
+1#
+0!
+1<
+0:
+b11 `
+#345000
+1!
+1:
+b11 _
+1]
+b0 \
+0^
+b100 `
+1T
+0&
+0R
+0Q
+0P
+#350000
+0!
+0:
+#355000
+1!
+1:
+b100 _
+0]
+b1 \
+1^
+0T
+1&
+1R
+b100 &!
+17
+#360000
+0!
+0:
+#365000
+1!
+1:
+#370000
+0!
+0:
+#375000
+1!
+1:
+#380000
+0!
+0:
+#385000
+1!
+1:
+#390000
+0#
+0!
+0<
+0:
+#395000
+1!
+1:
+#400000
+1"
+0!
+1;
+0:
+b0 _
+b0 \
+0[
+0^
+b0 `
+0S
+0&
+0R
+b0 &!
+07
+#405000
+1!
+1:
+#410000
+0!
+0:
+#415000
+1!
+1:
+#420000
+0!
+0:
+#425000
+1!
+1:
+#430000
+0!
+0:
+#435000
+1!
+1:
+#440000
+0!
+0:
+#445000
+1!
+1:
+#450000
+0"
+0!
+0;
+0:
+#455000
+1!
+1:
+#460000
+0!
+0:
+#465000
+1!
+1:
+#470000
+0!
+0:
+#475000
+1!
+1:
+#480000
+0!
+0:
+#485000
+1!
+1:
+#490000
+0!
+0:
+#495000
+1!
+1:
+#500000
+b10000101 %
+0!
+0N
+1M
+1H
+0:
+#505000
+1!
+1:
+#510000
+1#
+0!
+1<
+0:
+b1 `
+#515000
+1!
+1:
+b1 _
+1]
+b10 `
+1T
+#520000
+0!
+0:
+#525000
+1!
+1:
+b10 _
+0]
+1[
+0T
+1S
+#530000
+0!
+0:
+#535000
+1!
+1:
+b10000101 $!
+1o
+1j
+#540000
+0!
+0:
+#545000
+1!
+1:
+#550000
+0!
+0:
+#555000
+1!
+1:
+#560000
+0#
+0!
+0<
+0:
+#565000
+1!
+1:
+#570000
+0!
+0:
+#575000
+1!
+1:
+#580000
+0!
+0:
+#585000
+1!
+1:
+#590000
+0!
+0:
+#595000
+1!
+1:
+#600000
+0!
+0:
+#605000
+1!
+1:
+#610000
+b100 %
+0!
+0O
+0H
+0:
+#615000
+1!
+1:
+#620000
+1#
+0!
+1<
+0:
+b11 `
+#625000
+1!
+1:
+b11 _
+1]
+b100 `
+1T
+#630000
+0!
+0:
+#635000
+1!
+1:
+b100 _
+0]
+b1 \
+1^
+0T
+1&
+1R
+b10001000 &!
+16
+12
+#640000
+0!
+0:
+#645000
+1!
+1:
+b100 %!
+0#!
+0"!
+1!!
+b10001001 &!
+19
+#650000
+0!
+0:
+#655000
+1!
+1:
+#660000
+0!
+0:
+#665000
+1!
+1:
+#670000
+0#
+0!
+0<
+0:
+#675000
+1!
+1:
+#680000
+0!
+0:
+#685000
+1!
+1:
+#690000
+0!
+0:
+#695000
+1!
+1:
+#700000
+0!
+0:
+#705000
+1!
+1:
+#710000
+0!
+0:
+#715000
+1!
+1:
+#720000
+b11 $
+0!
+1>
+0:
+#725000
+1!
+1:
+#730000
+1#
+0!
+1<
+0:
+b11 `
+#735000
+1!
+1:
+b11 _
+1]
+b0 \
+0^
+b100 `
+1T
+0&
+0R
+b0 &!
+09
+06
+02
+#740000
+0!
+0:
+#745000
+1!
+1:
+b100 _
+0]
+b11 \
+1^
+0T
+1&
+1R
+1Q
+b1000010100 &!
+17
+15
+10
+#750000
+0!
+0:
+#755000
+1!
+1:
+#760000
+0!
+0:
+#765000
+1!
+1:
+#770000
+0!
+0:
+#775000
+1!
+1:
+#780000
+0#
+0!
+0<
+0:
+#785000
+1!
+1:
+#790000
+0!
+0:
+#795000
+1!
+1:
+#800000
+0!
+0:
+#805000
+1!
+1:
+#810000
+0!
+0:
+#815000
+1!
+1:
+#820000
+0!
+0:
+#825000
+1!
+1:
+#830000
+b10 $
+0!
+0?
+0:
+#835000
+1!
+1:
+#840000
+1#
+0!
+1<
+0:
+b11 `
+#845000
+1!
+1:
+b11 _
+1]
+b0 \
+0^
+b100 `
+1T
+0&
+0R
+0Q
+b0 &!
+07
+05
+00
+#850000
+0!
+0:
+#855000
+1!
+1:
+b100 _
+0]
+b10 \
+1^
+0T
+1&
+1Q
+b10000001 &!
+19
+12
+#860000
+0!
+0:
+#865000
+1!
+1:
+#870000
+0!
+0:
+#875000
+1!
+1:
+#880000
+0!
+0:
+#885000
+1!
+1:
+#890000
+0#
+0!
+0<
+0:
+#895000
+1!
+1:
+#900000
+0!
+0:
+#905000
+1!
+1:
+#910000
+0!
+0:
+#915000
+1!
+1:
+#920000
+0!
+0:
+#925000
+1!
+1:
+#930000
+0!
+0:
+#935000
+1!
+1:
+#940000
+0!
+0:
+#945000
+1!
+1:
+#950000
+0!
+0:
+#955000
+1!
+1:
+#960000
+0!
+0:
+#965000
+1!
+1:
+#970000
+0!
+0:
+#975000
+1!
+1:
+#980000
+0!
+0:
+#985000
+1!
+1:
+#990000
+0!
+0:
+#995000
+1!
+1:
+#1000000
+0!
+0:
+#1005000
+1!
+1:
+#1010000
+0!
+0:
+#1015000
+1!
+1:
+#1020000
+0!
+0:
+#1025000
+1!
+1:
+#1030000
+0!
+0:
+#1035000
+1!
+1:
+#1040000
+0!
+0:
+#1045000
+1!
+1:
+#1050000
+0!
+0:
+#1055000
+1!
+1:
+#1060000
+0!
+0:
+#1065000
+1!
+1:
+#1070000
+0!
+0:
+#1075000
+1!
+1:
+#1080000
+0!
+0:
+#1085000
+1!
+1:

@@ -1,0 +1,43 @@
+C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.sv {1 {vlog -work work -sv -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.sv {1 {vlog -work work -sv -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv {1 {vlog -work work -sv -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module testb
+
+Top level modules:
+	testb
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.sv {1 {vlog -work work -sv -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module topLevel
+
+Top level modules:
+	topLevel
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.sv {1 {vlog -work work -sv -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Datapath
+
+Top level modules:
+	Datapath
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.sv {1 {vlog -work work -sv -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}}
