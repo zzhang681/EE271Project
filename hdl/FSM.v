@@ -17,6 +17,9 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
     output reg WE, Done_out;                //write enable for register and done signal for S11
                                
     reg[2:0] CS, NS;                    //current state & next state
+
+    reg nextPrev;
+
     parameter   Idle1 = 3'b000,         //s0
                 Input1 = 3'b001,        //s1, input input1hao
                 Idle2 = 3'b010,
@@ -26,9 +29,12 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 
 
                 
-    always@(posedge CLK) CS = NS;
+    always@(posedge CLK) begin
+        CS <= NS;
+        nextPrev < = next;
+    end
     
-    always@(CS) begin
+    always@(*) begin
         case(CS)
             Idle1: begin            // Idle1 is initial state which is wating for input_1
                 WE = 0;             //we wont receive any data from input when WE = 0
@@ -36,7 +42,10 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 W1 = 0;             //W1 initial state
                 Done_out = 0;       //?
                 LEDsel = 2'b00;     //LED shows din in LED0 and LED1
-                NS = Idle1;
+                if (next && !nextPrev)
+                    NS = Input1;
+                else
+                    NS = Idle1;
                 end
                 
             Input1: begin
@@ -53,7 +62,10 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 W1 = 1;             //RF[1] <- Din (write Din into RF[1] (cuz now we are inputing input2
                 Done_out = 0;
                 LEDsel = 2'b00;     //LED shows din in LED0 and LED1
-                NS = Idle2;
+                if (next && !nextPrev)
+                    NS = Input2;
+                else
+                    NS = Idle2;
             end
 
             Input2: begin
@@ -70,7 +82,10 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 MS_out = MS;        //BCD
                 W1 = 1;             // don't care
                 Done_out = 0;
-                NS = calculation;
+                if (next && !nextPrev)
+                    NS = done;
+                else
+                    NS = calculation;
             end
             
             done: begin
@@ -90,83 +105,35 @@ module FSM(CLK, clear, next, MS, MS_out, LEDsel, Done_out, W1, WE
                 NS = Idle1;
             end
 
-            // Intering to ALU from here: (Change need to be made!)
-
-            // Wait: begin             //in this state we input MS
-            //     WE = 0;
-            //     MS_out = 3'b000;
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            // Add: begin
-            //     WE = 0;
-            //     MS_out = 3'b001;    //Add
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            // Sub: begin
-            //     WE = 0;
-            //     MS_out = 3'b010;    //Sub
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            // Mul: begin
-            //     WE = 0;
-            //     MS_out = 3'b011;    //Mul
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            // Xor: begin
-            //     WE = 0;
-            //     MS_out = 3'b100;    //XOR
-            //     W1 = 3'b010;   
-            //     Done_out = 1'b0;
-            // end
-            
-            //
-            ///////////////////////////////////////////////////////////
-            //
-            
-            // Done: begin
-            //     WE = 0;
-            //     //MS_out = 3'b000;    
-            //     W1 = 3'b010;   
-            //     Done_out = 0;
-            // end
-            
         endcase
     end   
 
-    always@(posedge next) begin
-        //NS = Idle;
-        case (CS)
+    // always@(posedge next) begin
+    //     //NS = Idle;
+    //     case (CS)
         
-            Idle1: begin 
-                NS = Input1;
-                end
+    //         Idle1: begin 
+    //             NS = Input1;
+    //             end
                 
-            Idle2: begin
-                NS = Input2;
-                end
+    //         Idle2: begin
+    //             NS = Input2;
+    //             end
             
-            calculation: begin
-                NS = done;
-                end
+    //         calculation: begin
+    //             NS = done;
+    //             end
                 
-            done: begin
-                NS = Idle1;
-                end
+    //         done: begin
+    //             NS = Idle1;
+    //             end
 
-            default: begin
-                NS = Idle1;
-                end
+    //         default: begin
+    //             NS = Idle1;
+    //             end
                 
-            endcase
-    end
+    //         endcase
+    // end
 
     always@(posedge clear)
     begin
