@@ -14,7 +14,7 @@ module topLevel(clk, clear, next, MS, Din, level,EDL1, EDL2, EDL3, EDL4,Done_out
 	output wire Done_out;
 	output wire[7:0] LED0, LED1, LED2, LED3;
 	output wire [7:0]HEX4;
-	output reg[15:0] ALUout_test;
+	//output reg[15:0] ALUout_test;
 	//output [15:0] Alu_out;
 
 	wire W1_wire, WE_wire;
