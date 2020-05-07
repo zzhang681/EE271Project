@@ -5,7 +5,7 @@
 module fourbit(in, out3, out2, out1, out0
 
     );
-  input[15:0] in;
+  input[15:0] in; // decimal
   output[3:0] out3, out2, out1, out0;
   wire [15:0] val1, val2, val3;
   
