@@ -1,0 +1,85 @@
+C:/Users/zid016/Desktop/EE271/EE271Project/hdl/debounce.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/debounce.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module debounce
+
+Top level modules:
+	debounce
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Encase_Level.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Encase_Level.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Encase_Level
+
+Top level modules:
+	Encase_Level
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Datapath
+
+Top level modules:
+	Datapath
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/LED_MUX2.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/LED_MUX2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module LED_MUX2
+
+Top level modules:
+	LED_MUX2
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module topLevel
+
+Top level modules:
+	topLevel
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/LED_MUX.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/LED_MUX.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module LED_MUX
+
+Top level modules:
+	LED_MUX
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/CLK_Generator.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/CLK_Generator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CLK_Generator
+
+Top level modules:
+	CLK_Generator
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/BCD27SEG.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/BCD27SEG.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BCD27SEG
+
+Top level modules:
+	BCD27SEG
+
+} {} {}} C:/Users/zid016/Desktop/EE271/EE271Project/hdl/fourbit.v {1 {vlog -work work -stats=none C:/Users/zid016/Desktop/EE271/EE271Project/hdl/fourbit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fourbit
+
+Top level modules:
+	fourbit
+
+} {} {}}

@@ -9,7 +9,7 @@ z2
 cModel Technology
 dF:/intelFPGA_lite/18.1
 vALU
-Z0 !s110 1588884079
+Z0 !s110 1588901818
 !i10b 1
 !s100 M[n?D0om[H2anOj_:jET03
 In9kK^GP]d:<YfMERd0Xoj2
@@ -23,12 +23,12 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1588884078.000000
+Z5 !s108 1588901818.000000
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/ALU.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 n@a@l@u
 vBCD27SEG
 R0
@@ -45,12 +45,12 @@ R4
 r1
 !s85 0
 31
-Z7 !s108 1588884079.000000
+R5
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/BCD27SEG.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/BCD27SEG.v|
 !i113 1
-R5
 R6
+R7
 n@b@c@d27@s@e@g
 vCLK_Generator
 R0
@@ -67,12 +67,12 @@ R4
 r1
 !s85 0
 31
-R7
+R5
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/CLK_Generator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/CLK_Generator.v|
 !i113 1
-R5
 R6
+R7
 n@c@l@k_@generator
 vDatapath
 R0
@@ -89,12 +89,12 @@ R4
 r1
 !s85 0
 31
-R7
+R5
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Datapath.v|
 !i113 1
-R5
 R6
+R7
 n@datapath
 vdebounce
 R0
@@ -111,12 +111,12 @@ R4
 r1
 !s85 0
 31
-R7
+R5
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/debounce.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/debounce.v|
 !i113 1
-R5
 R6
+R7
 vEncase_Level
 R0
 !i10b 1
@@ -132,12 +132,12 @@ R4
 r1
 !s85 0
 31
-R7
+R5
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Encase_Level.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/Encase_Level.v|
 !i113 1
-R5
 R6
+R7
 n@encase_@level
 vfourbit
 R0
@@ -154,14 +154,14 @@ R4
 r1
 !s85 0
 31
-R7
+R5
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/fourbit.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/fourbit.v|
 !i113 1
-R5
 R6
+R7
 vFSM
-R0
+Z8 !s110 1588901819
 !i10b 1
 !s100 U?4[]c[Zf:B:iBZWfUnle1
 I75PeA6ONnQ7HLL34894je0
@@ -175,15 +175,15 @@ R4
 r1
 !s85 0
 31
-R7
+Z9 !s108 1588901819.000000
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/FSM.v|
 !i113 1
-R5
 R6
+R7
 n@f@s@m
 vLED_MUX
-R0
+R8
 !i10b 1
 !s100 D8IaYf@=VoD5YWVZ5efTc1
 InR<z7YcIk0[l?jXV7_kON3
@@ -197,15 +197,15 @@ R4
 r1
 !s85 0
 31
-R7
+R9
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/LED_MUX.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/LED_MUX.v|
 !i113 1
-R5
 R6
+R7
 n@l@e@d_@m@u@x
 vLED_MUX2
-R0
+R8
 !i10b 1
 !s100 3c<N2DKbY:QnjH3hfoOLR0
 IS3]@]K[5g153i2UP6TlQ_0
@@ -219,15 +219,15 @@ R4
 r1
 !s85 0
 31
-R7
+R9
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/LED_MUX2.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/LED_MUX2.v|
 !i113 1
-R5
 R6
+R7
 n@l@e@d_@m@u@x2
 vregister
-R0
+R8
 !i10b 1
 !s100 eT7]^4mbiV@81dodK2K_32
 I0>=>jia0__c7>RGhVzTPW0
@@ -241,12 +241,12 @@ R4
 r1
 !s85 0
 31
-R7
+R9
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/register.v|
 !i113 1
-R5
 R6
+R7
 vtestb
 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
 !s110 1588199527
@@ -270,15 +270,15 @@ r1
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/testbench/testb.sv|
 !i113 1
 o-work work -sv
-R6
+R7
 vtop_tb
-Z8 !s110 1588884080
+R8
 !i10b 1
-!s100 lX4XYUTVDBQo;`VBJP9ee3
-IaBRCHHGh[?31YAeH[GMDU3
+!s100 hMKk3d4?U3<dEGjB3oiBE1
+I7`YNTfNn7Ri]ZJO:FJGIi3
 R1
 R2
-w1588878404
+w1588901807
 8C:/Users/zid016/Desktop/EE271/EE271Project/testbench/top_tb.v
 FC:/Users/zid016/Desktop/EE271/EE271Project/testbench/top_tb.v
 L0 5
@@ -286,12 +286,12 @@ R4
 r1
 !s85 0
 31
-!s108 1588884080.000000
+R9
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/testbench/top_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/testbench/top_tb.v|
 !i113 1
-R5
 R6
+R7
 vtopLevel
 R8
 !i10b 1
@@ -307,10 +307,10 @@ R4
 r1
 !s85 0
 31
-R7
+R9
 !s107 C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/zid016/Desktop/EE271/EE271Project/hdl/topLevel.v|
 !i113 1
-R5
 R6
+R7
 ntop@level

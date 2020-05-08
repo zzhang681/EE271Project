@@ -28,16 +28,19 @@ module top_tb(
         $display("MS = %b, HEX4 = %b, LED0 = %b, at %0t",MS , HEX4, LED0, $time);
         
     initial begin
-        #5 clear = 1; next = 1; Din = 2; level = 0; MS = 0;
+        clear = 1; next = 1; Din = 2; level = 0; MS = 0;
+        #10 level = 1; #10 Din = 0;
         #50 next = 0;
         #50 next = 1;
+        #10 level = 0;
         
         #30 Din = 3;
         #40 level = 1; Din = 4;
-        #50 next = 0; level = 0;
+        #50 next = 0; 
+        #10 level = 0;
         #60 next = 1;
         
-        #20 MS = 1;
+        #20 MS = 3'b001;
         #50 next = 0;
         #60 next = 1;
         
